@@ -1,0 +1,48 @@
+ErrorDocument 401 /index.php?p=401
+ErrorDocument 403 /index.php?p=403
+ErrorDocument 404 /index.php?p=404
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  #Options +FollowSymlinks
+  RewriteBase /
+
+  ##
+  # Uncomment the following lines and replace "domain.com" with your domain
+  # name to redirect requests without "www" to the correct domain.
+  ##
+  RewriteCond %{HTTP_HOST} !^www. [NC]
+  RewriteRule ^(.*) http://www.%{HTTP_HOST}/$1 [L,R=301]
+
+  #RewriteCond %{HTTP_HOST} ^www.dwebx.com
+#  RewriteRule ^(.*) http://www.dwebx.com/$1 [L,R=301]
+
+  # wenn keine Sprache (ISO 3166-1) zu beginn der Adresse
+#  RewriteCond %{REQUEST_URI} !^/([a-z]{2})/?
+#  RewriteRule ^(.*)$  /de/$1 [R,L]
+#  RewriteRule ^$  /de/ [R,L]
+
+#  RewriteCond %{REQUEST_URI} !^/([a-z]{2})/(.*)
+#  RewriteCond %{REQUEST_URI} ^/(.*).html$
+#  RewriteRule ^(.*)$  /de/$1 [R,L]
+
+  # Umleiten ohne Seitenparameter
+#  RewriteCond %{REQUEST_URI} ^/([a-z]{2})/?$
+#  RewriteRule ^(.*) /index.php?ln=$1 [L]
+  RewriteCond %{REQUEST_URI} ^/?$
+  RewriteRule ^(.*) index.php [L]
+
+  # Umleiten mit Seitenparameter
+#  RewriteCond %{REQUEST_URI} ^/(.*)/(.*)/.html$
+#  RewriteRule ^(.*)/(.*) /index.php?ln=$1&p=%2 [L]
+  RewriteCond %{REQUEST_URI} ^/(.*).html$
+  RewriteRule ^(.*) index.php?p=%1 [L]
+
+  # $1 bedeuten den kompletten MATCH der ersten Klammer verwenden
+  # %2 bedeutet den MATCH der zweiten Klammer ohne .html (siehe Condition) verwenden
+
+  ErrorDocument 401 /401.html
+  ErrorDocument 403 /403.html
+  ErrorDocument 404 /404.html
+
+</IfModule>

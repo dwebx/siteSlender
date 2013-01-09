@@ -1,0 +1,51 @@
+Hinweis: 
+Iquiery-Form ist eine modifizierte Variante von Contact-Form und kam erstmalig 
+mit der Version 1.03.00 zum Einsatz als Basis diente das siteSlender Framework v1.0.2
+
+
+v1.03.00 2011-11-13 15:00 CET
+
+ - Dateianhang
+ - Einbindung Config und Script erneuert
+ - Mailer Klasse für den Versand von Dateianhängen (attach_mailer_class.php) 
+ - HTML-Ausgabe der Content-Systematik des siteSlender Frameworks angeglichen
+ - optionale Captchaintegration (benötigt ./includes/captcha etc.) 
+ - Formularfehlerbehandlung vereinfacht. Nur noch ein Hinweisfenster mit allen
+   Fehlern, statt alle Fehler nacheinander in separaten Alarmfentern
+
+   Files:
+   - config.php
+   - feedback.php
+   - send.php
+   - attach_mailer_class.php   
+
+
+v1.02.02 2011-11-01 22:29 CET
+
+ - Beste Erreichbarkeit wird in der EMail und Emailbestätigung nur noch angezeigt,
+   wenn diese Eingabefelder im eigentlichen Formluar vorhanden sind
+
+   Files: 
+   - send.php ( Zeile: 61 )
+
+
+v1.02.01 2011-08-17 23:40 CEST
+
+ - optional form fields, extended fbcheck, minor changes
+
+
+v1.02.00 2011-05-28 03:15 CEST
+
+ - outsourced js file + prototype / mootools switch
+
+
+Version history
+ - v1.00.00 2007-04-17 23:00 CEST
+ - v1.00.02 2007-05-21 12:30 CEST
+ - v1.01.00 2011-02-11 00:50 CET
+ - v1.01.01 2011-02-17 00:50 CET
+ - v1.01.02 2011-04-05 23:45 CEST
+ - v1.02.00 2011-04-14 12:00 CEST
+ - v1.02.01 2011-08-17 23:40 CEST
+ - v1.02.02 2011-11-01 22:29 CET
+ - v1.03.00 2011-11-13 15:00 CET

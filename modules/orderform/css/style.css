@@ -1,0 +1,19 @@
+#fb .ghost { color: #888; }
+#fb .highlight { color: #068; }
+#fb label, 
+#fb .label { font-size: 8pt; font-weight: normal; }
+#fb input, 
+#fb textarea { background-color: #ffffff; border: solid 1px #dddedf; border-radius: 2px; -moz-border-radius: 2px; font-size: 9pt; }
+#fb input.button { background-color: #f7f8f9; }
+#fb input.link { background-color: transparent; border: none; color: #0d2c80; font-family: Helvetica, Arial, sans-serif; font-size: 11px; margin: 0; padding: 0; }
+#fb input.button:hover, 
+#fb input.link:hover { cursor: pointer; curor: hand; }
+#fb form input.focus, 
+#fb textarea.focus { background-color: #f7f8f9; border-color: #0d2c80; }
+#fb form label.focus { font-weight: bold; }
+#fb .text { width: 250px; }
+#fb .text.zip,
+#fb .text.time { width: 40px; }
+#fb .text.city { width: 200px; }
+#fb .subject { width: 330px; }
+#fb .message { width: 330px; }
